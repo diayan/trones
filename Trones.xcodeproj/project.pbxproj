@@ -11,6 +11,9 @@
 		B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EA72903D46F001041A8 /* ContentView.swift */; };
 		B2C26EAA2903D471001041A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C26EA92903D471001041A8 /* Assets.xcassets */; };
 		B2C26EAD2903D471001041A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C26EAC2903D471001041A8 /* Preview Assets.xcassets */; };
+		B2C26EB72903D642001041A8 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EB62903D642001041A8 /* House.swift */; };
+		B2C26EBA2903DA73001041A8 /* HousesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EB92903DA73001041A8 /* HousesMock.swift */; };
+		B2C26EBC2903DED3001041A8 /* HousesMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B2C26EBB2903DED3001041A8 /* HousesMock.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		B2C26EA72903D46F001041A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B2C26EA92903D471001041A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2C26EAC2903D471001041A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B2C26EB62903D642001041A8 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		B2C26EB92903DA73001041A8 /* HousesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesMock.swift; sourceTree = "<group>"; };
+		B2C26EBB2903DED3001041A8 /* HousesMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HousesMock.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		B2C26EA42903D46F001041A8 /* Trones */ = {
 			isa = PBXGroup;
 			children = (
+				B2C26EB32903D5FD001041A8 /* Core */,
 				B2C26EA52903D46F001041A8 /* TronesApp.swift */,
 				B2C26EA72903D46F001041A8 /* ContentView.swift */,
 				B2C26EA92903D471001041A8 /* Assets.xcassets */,
@@ -63,8 +70,42 @@
 			isa = PBXGroup;
 			children = (
 				B2C26EAC2903D471001041A8 /* Preview Assets.xcassets */,
+				B2C26EBB2903DED3001041A8 /* HousesMock.json */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B2C26EB32903D5FD001041A8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EB42903D605001041A8 /* domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B2C26EB42903D605001041A8 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EB52903D60E001041A8 /* model */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		B2C26EB52903D60E001041A8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EB82903DA63001041A8 /* house */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B2C26EB82903DA63001041A8 /* house */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EB62903D642001041A8 /* House.swift */,
+				B2C26EB92903DA73001041A8 /* HousesMock.swift */,
+			);
+			path = house;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C26EAD2903D471001041A8 /* Preview Assets.xcassets in Resources */,
+				B2C26EBC2903DED3001041A8 /* HousesMock.json in Resources */,
 				B2C26EAA2903D471001041A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C26EBA2903DA73001041A8 /* HousesMock.swift in Sources */,
 				B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */,
+				B2C26EB72903D642001041A8 /* House.swift in Sources */,
 				B2C26EA62903D46F001041A8 /* TronesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
