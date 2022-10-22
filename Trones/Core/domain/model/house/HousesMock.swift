@@ -12,7 +12,7 @@ private struct HousesMock: Codable {
 }
 
 private func loadHouses() -> [House] {
-    //find and load data from a file called HousesMock with an extension json
+    ///find and load data from a file called HousesMock with an extension json
     guard let url = Bundle.main.url(
         forResource: "HousesMock",
         withExtension: "json"
