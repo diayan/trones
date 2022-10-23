@@ -9,7 +9,7 @@ import Foundation
 
 struct House: Codable {
     var id: UUID? = UUID()
-    let url: String?
+    let url: URL?
     let name, region, coatOfArms, words: String?
     let titles, seats: [String?]?
     let currentLord, heir, overlord: String?
@@ -18,8 +18,8 @@ struct House: Codable {
     let diedOut: String?
     let ancestralWeapons: [String?]?
     let cadetBranches, swornMembers: [String?]?
+    
 }
-
 
 // MARK: -  conform to Identifiable
 extension House: Identifiable {

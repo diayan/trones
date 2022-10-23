@@ -18,7 +18,8 @@ struct ContentView: View {
                 List {
                     ForEach(houses, id: \.name) { house in
                         //AnimalRow(animal: house)
-                        Text(house.name ?? "")
+                        GOTHouseRow(house: house)
+                        //Text(house.name ?? "")
                     }
                 }
                 .task {
@@ -44,7 +45,7 @@ struct ContentView: View {
     
     func fetchGOTHouses() async{
         do {
-            let houses: [House] = try await requestManager.perform(HousesRequest.getHousesWith(page: 1))
+            let houses: [House] = try await requestManager.perform(HousesRequest.getHousesWith(page: 1, pageSize: 50))
             self.houses = houses
             await stopLoading()
         }catch {

@@ -25,7 +25,7 @@ private func loadHouses() -> [House] {
     return jsonMock?.houses ?? []
 }
 
-extension HousesMock {
+extension House {
     //expose this data to the rest of the app
     static let houses = loadHouses()
 }
