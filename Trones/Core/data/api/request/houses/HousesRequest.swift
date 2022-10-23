@@ -8,10 +8,21 @@
 import Foundation
 
 enum HousesRequest: RequestProtocol {
-    case getHousesWith(page: Int)
-
+    case getHousesWith(page: Int, pageSize: Int?)
+    
     var path: String {
         "/api/houses"
+    }
+    
+    var urlParams: [String : String?] {
+        switch self {
+        case let .getHousesWith(page: page, pageSize: pageSize):
+            var params = ["page": String(page)]
+            if let pageSize = pageSize {
+                params["pageSize"] = String(pageSize)
+            }
+            return params
+        }
     }
     
     var addAuthorizationToken: Bool {

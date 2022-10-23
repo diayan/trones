@@ -23,6 +23,7 @@
 		B2C26EDB2904008D001041A8 /* DataParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EDA2904008D001041A8 /* DataParserProtocol.swift */; };
 		B2C26EDE2904544E001041A8 /* HousesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EDD2904544E001041A8 /* HousesRequest.swift */; };
 		B2C26EE32905CC52001041A8 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EE22905CC52001041A8 /* Data+Extension.swift */; };
+		B2C26EE72905E6D1001041A8 /* GOTHouseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EE62905E6D1001041A8 /* GOTHouseRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B2C26EDA2904008D001041A8 /* DataParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParserProtocol.swift; sourceTree = "<group>"; };
 		B2C26EDD2904544E001041A8 /* HousesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesRequest.swift; sourceTree = "<group>"; };
 		B2C26EE22905CC52001041A8 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		B2C26EE62905E6D1001041A8 /* GOTHouseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTHouseRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		B2C26EA42903D46F001041A8 /* Trones */ = {
 			isa = PBXGroup;
 			children = (
+				B2C26EE42905E698001041A8 /* GOTHouses */,
 				B2C26EB32903D5FD001041A8 /* Core */,
 				B2C26EA52903D46F001041A8 /* TronesApp.swift */,
 				B2C26EA72903D46F001041A8 /* ContentView.swift */,
@@ -183,6 +186,22 @@
 			path = houses;
 			sourceTree = "<group>";
 		};
+		B2C26EE42905E698001041A8 /* GOTHouses */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EE52905E6B9001041A8 /* views */,
+			);
+			path = GOTHouses;
+			sourceTree = "<group>";
+		};
+		B2C26EE52905E6B9001041A8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EE62905E6D1001041A8 /* GOTHouseRow.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,6 +277,7 @@
 				B2C26EE32905CC52001041A8 /* Data+Extension.swift in Sources */,
 				B2C26ED62903FA26001041A8 /* APIManagerProtocol.swift in Sources */,
 				B2C26ED42903F0D8001041A8 /* NetworkError.swift in Sources */,
+				B2C26EE72905E6D1001041A8 /* GOTHouseRow.swift in Sources */,
 				B2C26EBA2903DA73001041A8 /* HousesMock.swift in Sources */,
 				B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */,
 				B2C26EDB2904008D001041A8 /* DataParserProtocol.swift in Sources */,
