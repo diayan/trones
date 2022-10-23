@@ -8,14 +8,53 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let requestManager = RequestManager()
+    @State var houses: [House] = []
+    @State var isLoading = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            if #available(iOS 15.0, *) {
+                List {
+                    ForEach(houses, id: \.name) { house in
+                        //AnimalRow(animal: house)
+                        Text(house.name ?? "")
+                    }
+                }
+                .task {
+                    await fetchGOTHouses()
+                }
+                .listStyle(.plain)
+                .navigationTitle("GOT Houses")
+                .overlay {
+                    if isLoading {
+                        ProgressView("Fetching GOT houses")
+                    }
+                }
+            } else {
+                overlay(ProgressView("Fetching GOT houses"), alignment: .center)
+                    .onAppear {
+                        Task {
+                            await fetchGOTHouses()
+                        }
+                    }
+            }
+        }.navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    func fetchGOTHouses() async{
+        do {
+            let houses: [House] = try await requestManager.perform(HousesRequest.getHousesWith(page: 1))
+            self.houses = houses
+            await stopLoading()
+        }catch {
+            print(error.localizedDescription)
         }
-        .padding()
+    }
+    
+    @MainActor ///mainactor tells swift to run on the main thread
+    func stopLoading() async {
+        isLoading = false
     }
 }
 

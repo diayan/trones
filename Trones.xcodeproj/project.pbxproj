@@ -18,6 +18,11 @@
 		B2C26ECF2903F055001041A8 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26ECE2903F055001041A8 /* RequestType.swift */; };
 		B2C26ED12903F079001041A8 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26ED02903F079001041A8 /* ApiConstants.swift */; };
 		B2C26ED42903F0D8001041A8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26ED32903F0D8001041A8 /* NetworkError.swift */; };
+		B2C26ED62903FA26001041A8 /* APIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26ED52903FA26001041A8 /* APIManagerProtocol.swift */; };
+		B2C26ED82903FEAF001041A8 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26ED72903FEAF001041A8 /* RequestManager.swift */; };
+		B2C26EDB2904008D001041A8 /* DataParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EDA2904008D001041A8 /* DataParserProtocol.swift */; };
+		B2C26EDE2904544E001041A8 /* HousesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EDD2904544E001041A8 /* HousesRequest.swift */; };
+		B2C26EE32905CC52001041A8 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EE22905CC52001041A8 /* Data+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		B2C26ECE2903F055001041A8 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		B2C26ED02903F079001041A8 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		B2C26ED32903F0D8001041A8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B2C26ED52903FA26001041A8 /* APIManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerProtocol.swift; sourceTree = "<group>"; };
+		B2C26ED72903FEAF001041A8 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		B2C26EDA2904008D001041A8 /* DataParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParserProtocol.swift; sourceTree = "<group>"; };
+		B2C26EDD2904544E001041A8 /* HousesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesRequest.swift; sourceTree = "<group>"; };
+		B2C26EE22905CC52001041A8 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,7 @@
 				B2C26EA72903D46F001041A8 /* ContentView.swift */,
 				B2C26EA92903D471001041A8 /* Assets.xcassets */,
 				B2C26EAB2903D471001041A8 /* Preview Content */,
+				B2C26EE22905CC52001041A8 /* Data+Extension.swift */,
 			);
 			path = Trones;
 			sourceTree = "<group>";
@@ -128,6 +139,7 @@
 		B2C26ECA2903EFB2001041A8 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				B2C26ED929040070001041A8 /* parser */,
 				B2C26ED22903F0CD001041A8 /* network */,
 				B2C26ECD2903F043001041A8 /* request */,
 				B2C26ED02903F079001041A8 /* ApiConstants.swift */,
@@ -138,6 +150,7 @@
 		B2C26ECD2903F043001041A8 /* request */ = {
 			isa = PBXGroup;
 			children = (
+				B2C26EDC29045433001041A8 /* houses */,
 				B2C26ECB2903EFD1001041A8 /* RequestProtocol.swift */,
 				B2C26ECE2903F055001041A8 /* RequestType.swift */,
 			);
@@ -148,8 +161,26 @@
 			isa = PBXGroup;
 			children = (
 				B2C26ED32903F0D8001041A8 /* NetworkError.swift */,
+				B2C26ED52903FA26001041A8 /* APIManagerProtocol.swift */,
+				B2C26ED72903FEAF001041A8 /* RequestManager.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		B2C26ED929040070001041A8 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EDA2904008D001041A8 /* DataParserProtocol.swift */,
+			);
+			path = parser;
+			sourceTree = "<group>";
+		};
+		B2C26EDC29045433001041A8 /* houses */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EDD2904544E001041A8 /* HousesRequest.swift */,
+			);
+			path = houses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,12 +255,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C26ED12903F079001041A8 /* ApiConstants.swift in Sources */,
+				B2C26EE32905CC52001041A8 /* Data+Extension.swift in Sources */,
+				B2C26ED62903FA26001041A8 /* APIManagerProtocol.swift in Sources */,
 				B2C26ED42903F0D8001041A8 /* NetworkError.swift in Sources */,
 				B2C26EBA2903DA73001041A8 /* HousesMock.swift in Sources */,
 				B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */,
+				B2C26EDB2904008D001041A8 /* DataParserProtocol.swift in Sources */,
+				B2C26ED82903FEAF001041A8 /* RequestManager.swift in Sources */,
 				B2C26EB72903D642001041A8 /* House.swift in Sources */,
 				B2C26EA62903D46F001041A8 /* TronesApp.swift in Sources */,
 				B2C26ECC2903EFD1001041A8 /* RequestProtocol.swift in Sources */,
+				B2C26EDE2904544E001041A8 /* HousesRequest.swift in Sources */,
 				B2C26ECF2903F055001041A8 /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
