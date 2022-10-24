@@ -24,6 +24,8 @@
 		B2C26EDE2904544E001041A8 /* HousesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EDD2904544E001041A8 /* HousesRequest.swift */; };
 		B2C26EE32905CC52001041A8 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EE22905CC52001041A8 /* Data+Extension.swift */; };
 		B2C26EE72905E6D1001041A8 /* GOTHouseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EE62905E6D1001041A8 /* GOTHouseRow.swift */; };
+		B2C26EEC29070692001041A8 /* HousesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EEB29070692001041A8 /* HousesViewModel.swift */; };
+		B2C26EEF29073435001041A8 /* HouseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EEE29073435001041A8 /* HouseDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		B2C26EDD2904544E001041A8 /* HousesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesRequest.swift; sourceTree = "<group>"; };
 		B2C26EE22905CC52001041A8 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		B2C26EE62905E6D1001041A8 /* GOTHouseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTHouseRow.swift; sourceTree = "<group>"; };
+		B2C26EEB29070692001041A8 /* HousesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewModel.swift; sourceTree = "<group>"; };
+		B2C26EEE29073435001041A8 /* HouseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,8 @@
 		B2C26EE42905E698001041A8 /* GOTHouses */ = {
 			isa = PBXGroup;
 			children = (
+				B2C26EED29073414001041A8 /* detailsView */,
+				B2C26EEA29070669001041A8 /* viewModels */,
 				B2C26EE52905E6B9001041A8 /* views */,
 			);
 			path = GOTHouses;
@@ -200,6 +206,22 @@
 				B2C26EE62905E6D1001041A8 /* GOTHouseRow.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		B2C26EEA29070669001041A8 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EEB29070692001041A8 /* HousesViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		B2C26EED29073414001041A8 /* detailsView */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EEE29073435001041A8 /* HouseDetailView.swift */,
+			);
+			path = detailsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +297,7 @@
 			files = (
 				B2C26ED12903F079001041A8 /* ApiConstants.swift in Sources */,
 				B2C26EE32905CC52001041A8 /* Data+Extension.swift in Sources */,
+				B2C26EEF29073435001041A8 /* HouseDetailView.swift in Sources */,
 				B2C26ED62903FA26001041A8 /* APIManagerProtocol.swift in Sources */,
 				B2C26ED42903F0D8001041A8 /* NetworkError.swift in Sources */,
 				B2C26EE72905E6D1001041A8 /* GOTHouseRow.swift in Sources */,
@@ -282,6 +305,7 @@
 				B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */,
 				B2C26EDB2904008D001041A8 /* DataParserProtocol.swift in Sources */,
 				B2C26ED82903FEAF001041A8 /* RequestManager.swift in Sources */,
+				B2C26EEC29070692001041A8 /* HousesViewModel.swift in Sources */,
 				B2C26EB72903D642001041A8 /* House.swift in Sources */,
 				B2C26EA62903D46F001041A8 /* TronesApp.swift in Sources */,
 				B2C26ECC2903EFD1001041A8 /* RequestProtocol.swift in Sources */,
