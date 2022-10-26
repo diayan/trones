@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B267AA5B2909726000F13E85 /* TronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA5A2909726000F13E85 /* TronesTests.swift */; };
+		B267AA68290978D400F13E85 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA67290978D400F13E85 /* APIManagerMock.swift */; };
+		B267AA6D29097E3300F13E85 /* HousesRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */; };
+		B267AA6F29097F5000F13E85 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA6E29097F5000F13E85 /* RequestManagerTests.swift */; };
 		B2C26EA62903D46F001041A8 /* TronesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EA52903D46F001041A8 /* TronesApp.swift */; };
 		B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EA72903D46F001041A8 /* ContentView.swift */; };
 		B2C26EAA2903D471001041A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C26EA92903D471001041A8 /* Assets.xcassets */; };
@@ -28,7 +32,22 @@
 		B2C26EEF29073435001041A8 /* HouseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EEE29073435001041A8 /* HouseDetailView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B267AA5C2909726000F13E85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2C26E9A2903D46F001041A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2C26EA12903D46F001041A8;
+			remoteInfo = Trones;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B267AA582909726000F13E85 /* TronesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TronesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B267AA5A2909726000F13E85 /* TronesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TronesTests.swift; sourceTree = "<group>"; };
+		B267AA67290978D400F13E85 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
+		B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesRequestMock.swift; sourceTree = "<group>"; };
+		B267AA6E29097F5000F13E85 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		B2C26EA22903D46F001041A8 /* Trones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C26EA52903D46F001041A8 /* TronesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TronesApp.swift; sourceTree = "<group>"; };
 		B2C26EA72903D46F001041A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +71,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B267AA552909726000F13E85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2C26E9F2903D46F001041A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,10 +88,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B267AA592909726000F13E85 /* TronesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA61290977E100F13E85 /* Tests */,
+				B267AA5A2909726000F13E85 /* TronesTests.swift */,
+			);
+			path = TronesTests;
+			sourceTree = "<group>";
+		};
+		B267AA61290977E100F13E85 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA62290977F200F13E85 /* Core */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B267AA62290977F200F13E85 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA632909781200F13E85 /* data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B267AA632909781200F13E85 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA642909781E00F13E85 /* api */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		B267AA642909781E00F13E85 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA65290978A300F13E85 /* mock */,
+				B267AA6E29097F5000F13E85 /* RequestManagerTests.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		B267AA65290978A300F13E85 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA67290978D400F13E85 /* APIManagerMock.swift */,
+				B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
 		B2C26E992903D46F001041A8 = {
 			isa = PBXGroup;
 			children = (
 				B2C26EA42903D46F001041A8 /* Trones */,
+				B267AA592909726000F13E85 /* TronesTests */,
 				B2C26EA32903D46F001041A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B2C26EA22903D46F001041A8 /* Trones.app */,
+				B267AA582909726000F13E85 /* TronesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +306,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B267AA572909726000F13E85 /* TronesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B267AA602909726000F13E85 /* Build configuration list for PBXNativeTarget "TronesTests" */;
+			buildPhases = (
+				B267AA542909726000F13E85 /* Sources */,
+				B267AA552909726000F13E85 /* Frameworks */,
+				B267AA562909726000F13E85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B267AA5D2909726000F13E85 /* PBXTargetDependency */,
+			);
+			name = TronesTests;
+			productName = TronesTests;
+			productReference = B267AA582909726000F13E85 /* TronesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B2C26EA12903D46F001041A8 /* Trones */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2C26EB02903D471001041A8 /* Build configuration list for PBXNativeTarget "Trones" */;
@@ -254,6 +351,10 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					B267AA572909726000F13E85 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = B2C26EA12903D46F001041A8;
+					};
 					B2C26EA12903D46F001041A8 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -273,11 +374,19 @@
 			projectRoot = "";
 			targets = (
 				B2C26EA12903D46F001041A8 /* Trones */,
+				B267AA572909726000F13E85 /* TronesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B267AA562909726000F13E85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2C26EA02903D46F001041A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +400,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B267AA542909726000F13E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B267AA6D29097E3300F13E85 /* HousesRequestMock.swift in Sources */,
+				B267AA68290978D400F13E85 /* APIManagerMock.swift in Sources */,
+				B267AA5B2909726000F13E85 /* TronesTests.swift in Sources */,
+				B267AA6F29097F5000F13E85 /* RequestManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2C26E9E2903D46F001041A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,7 +436,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B267AA5D2909726000F13E85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2C26EA12903D46F001041A8 /* Trones */;
+			targetProxy = B267AA5C2909726000F13E85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B267AA5E2909726000F13E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9WTXG2G2BJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.diayansiat.TronesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trones.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Trones";
+			};
+			name = Debug;
+		};
+		B267AA5F2909726000F13E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9WTXG2G2BJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.diayansiat.TronesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trones.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Trones";
+			};
+			name = Release;
+		};
 		B2C26EAE2903D471001041A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,6 +658,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B267AA602909726000F13E85 /* Build configuration list for PBXNativeTarget "TronesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B267AA5E2909726000F13E85 /* Debug */,
+				B267AA5F2909726000F13E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B2C26E9D2903D46F001041A8 /* Build configuration list for PBXProject "Trones" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
