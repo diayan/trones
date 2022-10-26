@@ -13,12 +13,13 @@ struct GOTHouseRow: View {
     var body: some View {
         HStack {
             Image(systemName: "house")
-                .font(Font.system(.title))
+                .font(.system(size: 40.0))
+               // .foregroundColor(.black)
 
           VStack(alignment: .leading) {
               Text(house.name ?? "")
               .multilineTextAlignment(.center)
-              .font(.title3)
+              //.font(.title3)
           }
           .lineLimit(1)
         }
