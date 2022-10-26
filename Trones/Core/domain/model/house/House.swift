@@ -9,7 +9,7 @@ import Foundation
 
 struct House: Codable {
     var id: UUID? = UUID()
-    let url: URL?
+    let url: String?
     let name, region, coatOfArms, words: String?
     let titles, seats: [String]?
     let currentLord, heir, overlord: String?
