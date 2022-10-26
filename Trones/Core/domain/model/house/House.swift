@@ -11,13 +11,13 @@ struct House: Codable {
     var id: UUID? = UUID()
     let url: URL?
     let name, region, coatOfArms, words: String?
-    let titles, seats: [String?]?
+    let titles, seats: [String]?
     let currentLord, heir, overlord: String?
     let founded: String?
     let founder: String?
     let diedOut: String?
-    let ancestralWeapons: [String?]?
-    let cadetBranches, swornMembers: [String?]?
+    let ancestralWeapons: [String]?
+    let cadetBranches, swornMembers: [String]?
     
 }
 

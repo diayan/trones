@@ -17,9 +17,9 @@ struct ContentView: View {
             if #available(iOS 15.0, *) {
                 List {
                     ForEach(houses, id: \.name) { house in
-                        //AnimalRow(animal: house)
-                        GOTHouseRow(house: house)
-                        //Text(house.name ?? "")
+                        NavigationLink(destination: HouseDetailView(house: house)) {
+                            GOTHouseRow(house: house)
+                        }
                     }
                 }
                 .task {
