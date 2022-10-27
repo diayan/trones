@@ -29,7 +29,7 @@ struct HousesView: View {
                             }
                     }
                 }
-                .searchable(text: $searchText)
+               // .searchable(text: $searchText)
                 .task {
                     await viewModel.fetchGOTHouses()
                 }
