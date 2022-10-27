@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     private let requestManager = RequestManager()
-    @State var houses: [House] = []
+   // @State var houses: [House] = []
+    @State var houses: [HouseEntity] = []
     @State var isLoading = true
     
     var body: some View {
@@ -17,9 +18,9 @@ struct ContentView: View {
             if #available(iOS 15.0, *) {
                 List {
                     ForEach(houses, id: \.name) { house in
-                        NavigationLink(destination: HouseDetailView(house: house)) {
+                       // NavigationLink(destination: HouseDetailView(house: house)) {
                             GOTHouseRow(house: house)
-                        }
+                      //  }
                     }
                 }
                 .task {
@@ -46,7 +47,9 @@ struct ContentView: View {
     func fetchGOTHouses() async{
         do {
             let houses: [House] = try await requestManager.perform(HousesRequest.getHousesWith(page: 1, pageSize: 50))
-            self.houses = houses
+            for var house in houses {
+                 house.toManagedObject()
+               }
             await stopLoading()
         }catch {
             print(error.localizedDescription)
@@ -61,6 +64,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        if let houses = CoreDataHelper.getTestHouseEntities() {
+            ContentView(houses: houses, isLoading: false)
+        }
     }
 }

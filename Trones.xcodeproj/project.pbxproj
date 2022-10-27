@@ -11,6 +11,12 @@
 		B267AA68290978D400F13E85 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA67290978D400F13E85 /* APIManagerMock.swift */; };
 		B267AA6D29097E3300F13E85 /* HousesRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */; };
 		B267AA6F29097F5000F13E85 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA6E29097F5000F13E85 /* RequestManagerTests.swift */; };
+		B267AA732909932C00F13E85 /* Trones.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B267AA712909932C00F13E85 /* Trones.xcdatamodeld */; };
+		B267AA7529099ABF00F13E85 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA7429099ABF00F13E85 /* Persistence.swift */; };
+		B267AA7829099B5900F13E85 /* House+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA7729099B5900F13E85 /* House+CoreData.swift */; };
+		B267AA7A29099C5C00F13E85 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA7929099C5C00F13E85 /* CoreDataHelper.swift */; };
+		B267AA7C2909B6C000F13E85 /* CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA7B2909B6C000F13E85 /* CoreDataPersistable.swift */; };
+		B267AA80290A5ABD00F13E85 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA7F290A5ABD00F13E85 /* CoreDataTests.swift */; };
 		B2C26EA62903D46F001041A8 /* TronesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EA52903D46F001041A8 /* TronesApp.swift */; };
 		B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EA72903D46F001041A8 /* ContentView.swift */; };
 		B2C26EAA2903D471001041A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C26EA92903D471001041A8 /* Assets.xcassets */; };
@@ -48,6 +54,12 @@
 		B267AA67290978D400F13E85 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
 		B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesRequestMock.swift; sourceTree = "<group>"; };
 		B267AA6E29097F5000F13E85 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		B267AA722909932C00F13E85 /* Trones.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trones.xcdatamodel; sourceTree = "<group>"; };
+		B267AA7429099ABF00F13E85 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B267AA7729099B5900F13E85 /* House+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "House+CoreData.swift"; sourceTree = "<group>"; };
+		B267AA7929099C5C00F13E85 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		B267AA7B2909B6C000F13E85 /* CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistable.swift; sourceTree = "<group>"; };
+		B267AA7F290A5ABD00F13E85 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		B2C26EA22903D46F001041A8 /* Trones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C26EA52903D46F001041A8 /* TronesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TronesApp.swift; sourceTree = "<group>"; };
 		B2C26EA72903D46F001041A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +128,7 @@
 		B267AA632909781200F13E85 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				B267AA7E290A5A9C00F13E85 /* coreData */,
 				B267AA642909781E00F13E85 /* api */,
 			);
 			path = data;
@@ -137,6 +150,34 @@
 				B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */,
 			);
 			path = mock;
+			sourceTree = "<group>";
+		};
+		B267AA70290992FC00F13E85 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA7629099B4100F13E85 /* extensions */,
+				B267AA712909932C00F13E85 /* Trones.xcdatamodeld */,
+				B267AA7429099ABF00F13E85 /* Persistence.swift */,
+				B267AA7929099C5C00F13E85 /* CoreDataHelper.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
+		B267AA7629099B4100F13E85 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA7729099B5900F13E85 /* House+CoreData.swift */,
+				B267AA7B2909B6C000F13E85 /* CoreDataPersistable.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		B267AA7E290A5A9C00F13E85 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA7F290A5ABD00F13E85 /* CoreDataTests.swift */,
+			);
+			path = coreData;
 			sourceTree = "<group>";
 		};
 		B2C26E992903D46F001041A8 = {
@@ -217,6 +258,7 @@
 		B2C26EC92903EFA9001041A8 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				B267AA70290992FC00F13E85 /* coreData */,
 				B2C26ECA2903EFB2001041A8 /* api */,
 			);
 			path = data;
@@ -408,6 +450,7 @@
 				B267AA68290978D400F13E85 /* APIManagerMock.swift in Sources */,
 				B267AA5B2909726000F13E85 /* TronesTests.swift in Sources */,
 				B267AA6F29097F5000F13E85 /* RequestManagerTests.swift in Sources */,
+				B267AA80290A5ABD00F13E85 /* CoreDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,16 +458,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B267AA7829099B5900F13E85 /* House+CoreData.swift in Sources */,
 				B2C26ED12903F079001041A8 /* ApiConstants.swift in Sources */,
 				B2C26EE32905CC52001041A8 /* Data+Extension.swift in Sources */,
 				B2C26EEF29073435001041A8 /* HouseDetailView.swift in Sources */,
 				B2C26ED62903FA26001041A8 /* APIManagerProtocol.swift in Sources */,
 				B2C26ED42903F0D8001041A8 /* NetworkError.swift in Sources */,
+				B267AA7C2909B6C000F13E85 /* CoreDataPersistable.swift in Sources */,
 				B2C26EE72905E6D1001041A8 /* GOTHouseRow.swift in Sources */,
 				B2C26EBA2903DA73001041A8 /* HousesMock.swift in Sources */,
 				B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */,
 				B2C26EDB2904008D001041A8 /* DataParserProtocol.swift in Sources */,
+				B267AA7A29099C5C00F13E85 /* CoreDataHelper.swift in Sources */,
+				B267AA7529099ABF00F13E85 /* Persistence.swift in Sources */,
 				B2C26ED82903FEAF001041A8 /* RequestManager.swift in Sources */,
+				B267AA732909932C00F13E85 /* Trones.xcdatamodeld in Sources */,
 				B2C26EEC29070692001041A8 /* HousesViewModel.swift in Sources */,
 				B2C26EB72903D642001041A8 /* House.swift in Sources */,
 				B2C26EA62903D46F001041A8 /* TronesApp.swift in Sources */,
@@ -686,6 +734,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B267AA712909932C00F13E85 /* Trones.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B267AA722909932C00F13E85 /* Trones.xcdatamodel */,
+			);
+			currentVersion = B267AA722909932C00F13E85 /* Trones.xcdatamodel */;
+			path = Trones.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B2C26E9A2903D46F001041A8 /* Project object */;
 }

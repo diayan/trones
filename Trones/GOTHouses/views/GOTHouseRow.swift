@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GOTHouseRow: View {
-    let house: House
+    let house: HouseEntity
 
     var body: some View {
         HStack {
@@ -28,7 +28,7 @@ struct GOTHouseRow: View {
 
 struct GOTHouseRow_Previews: PreviewProvider {
     static var previews: some View {
-        if let house = House.houses.first {
+        if let house = CoreDataHelper.getTestHouseEntity() {
             GOTHouseRow(house: house)
         }
     }
