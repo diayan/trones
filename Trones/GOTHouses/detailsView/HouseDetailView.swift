@@ -29,16 +29,16 @@ struct HouseDetailView: View {
                         
                         Spacer()
                         
-                        if let seats = house.seats  {
-                            Text("Seats: \(seats.count)")
+                        if let swornMembers = house.swornMembers  {
+                            Text("Sworn Members: \(swornMembers.count)")
                         }
                     }
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 }
                 
-                
                 Divider()
+                Spacer(minLength: 24)
 
                 VStack(alignment: .leading) {
                     if let coatOfArms = house.coatOfArms, !coatOfArms.isEmpty {
@@ -48,7 +48,7 @@ struct HouseDetailView: View {
                             .foregroundColor(.secondary)
                     }
                     
-                    Spacer()
+                    Spacer(minLength: 24)
                     
                     if let words = house.words, !words.isEmpty {
                         Text("Sworn Words")
@@ -58,7 +58,7 @@ struct HouseDetailView: View {
                     }
                 }
                         
-                Divider()
+                Spacer(minLength: 24)
                 
                 VStack(alignment: .leading) {
                     HStack {
@@ -83,27 +83,19 @@ struct HouseDetailView: View {
                     }
                 }
                 
-                Divider()
+                Spacer(minLength: 24)
                 
-                if let swornMembers = house.swornMembers {
-                    if swornMembers.count != 0 {
+                if let titles = house.titles {
+                    if titles.count != 0 {
                         HStack {
                             Image(systemName: "flag.2.crossed")
-                            Text("\(swornMembers.count) Sworn Members")
+                            Text("\(titles.count) Title")
+                                .font(.title2)
                         }
-                        ForEach(swornMembers, id: \.self) { member in
-                            if let sworn = member   {
-                                Link(destination: URL(string: sworn)!) {
-                                    HStack {
-                                        Image(systemName: "link")
-                                            .imageScale(.small)
-                                        Text(member)
-                                            .font(.callout)
-                                    }
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.1)
-                                }
-                            }
+                        Spacer(minLength: 8)
+                        ForEach(titles, id: \.self) { title in
+                            Text(title)
+                                .font(.callout)
                         }
                     }
                 }
