@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HousesView: View {
     @State var searchText = ""
     @ObservedObject var viewModel: HousesViewModel
-
+    
     var body: some View {
         NavigationView {
             if #available(iOS 15.0, *) {
@@ -21,12 +21,12 @@ struct ContentView: View {
                         }
                     }
                     if !viewModel.houses.isEmpty && viewModel.hasMoreHouses {
-                      ProgressView("Finding more houses...")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .task {
-                          await viewModel.fetchMoreHouses()
-                        }
+                        ProgressView("Finding more houses...")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .task {
+                                await viewModel.fetchMoreHouses()
+                            }
                     }
                 }
                 .searchable(text: $searchText)
@@ -49,11 +49,11 @@ struct ContentView: View {
                     }
             }
         }.navigationViewStyle(StackNavigationViewStyle())
-    }    
+    }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HousesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: HousesViewModel(houseFetcher: HouseFetcherMock()))
+        HousesView(viewModel: HousesViewModel(houseFetcher: HouseFetcherMock()))
     }
 }

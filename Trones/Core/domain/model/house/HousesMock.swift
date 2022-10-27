@@ -17,7 +17,7 @@ private func loadHouses() -> [House] {
         forResource: "HousesMock",
         withExtension: "json"
     ),
-    let data = try? Data(contentsOf: url) else { return [] }
+          let data = try? Data(contentsOf: url) else { return [] }
     
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase //convert keys stored as snake case into camel case

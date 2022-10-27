@@ -11,7 +11,7 @@ import SwiftUI
 struct TronesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: HousesViewModel(
+            HousesView(viewModel: HousesViewModel(
                 houseFetcher: FetchHousesService(requestManager: RequestManager())
             )
             )
