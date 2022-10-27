@@ -17,23 +17,25 @@ final class HousesViewModel: ObservableObject {
     
     private (set) var page = 1
     @Published var isLoading: Bool ///track the state of the view state
-    @Published var hasMoreAnimals = true
+    @Published var hasMoreHouses = true
     @Published var houses: [House] = []
     private let houseFetcher: HousesFetcher
 
-    init(isLoading: Bool = true, hasMoreAnimals: Bool = true, houseFetcher: HousesFetcher, page: Int = 1) {
+    init(isLoading: Bool = true, hasMoreHouses: Bool = true, houseFetcher: HousesFetcher, page: Int = 1) {
         self.isLoading = isLoading
-        self.hasMoreAnimals = hasMoreAnimals
+        self.hasMoreHouses = hasMoreHouses
         self.houseFetcher = houseFetcher
         self.page = page
     }
     
     func fetchGOTHouses() async{
-        houses = await houseFetcher.fetchHouses(page: page)
+        let houses = await houseFetcher.fetchHouses(page: page)
+        self.houses += houses
         isLoading = false
+        hasMoreHouses = !houses.isEmpty
     }
     
-    func fetchMoreAnimals() async {
+    func fetchMoreHouses() async {
         page += 1
         await fetchGOTHouses()
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var searchText = ""
     @ObservedObject var viewModel: HousesViewModel
 
     var body: some View {
@@ -19,7 +20,16 @@ struct ContentView: View {
                             GOTHouseRow(house: house)
                         }
                     }
+                    if !viewModel.houses.isEmpty && viewModel.hasMoreHouses {
+                      ProgressView("Finding more houses...")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .task {
+                          await viewModel.fetchMoreHouses()
+                        }
+                    }
                 }
+                .searchable(text: $searchText)
                 .task {
                     await viewModel.fetchGOTHouses()
                 }

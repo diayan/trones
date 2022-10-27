@@ -17,7 +17,7 @@ struct FetchHousesService {
 
 extension FetchHousesService: HousesFetcher {
     func fetchHouses(page: Int) async -> [House] {
-        let requestData = HousesRequest.getHousesWith(page: page, pageSize: 50)
+        let requestData = HousesRequest.getHousesWith(page: page, pageSize: 10)
         
         do {
             let houses: [House] = try await
