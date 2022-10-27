@@ -8,27 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let requestManager = RequestManager()
-    @State var houses: [House] = []
-    @State var isLoading = true
-    
+    @ObservedObject var viewModel: HousesViewModel
+
     var body: some View {
         NavigationView {
             if #available(iOS 15.0, *) {
                 List {
-                    ForEach(houses, id: \.name) { house in
+                    ForEach(viewModel.houses, id: \.name) { house in
                         NavigationLink(destination: HouseDetailView(house: house)) {
                             GOTHouseRow(house: house)
                         }
                     }
                 }
                 .task {
-                    await fetchGOTHouses()
+                    await viewModel.fetchGOTHouses()
                 }
                 .listStyle(.plain)
                 .navigationTitle("GOT Houses")
                 .overlay {
-                    if isLoading {
+                    if viewModel.isLoading && viewModel.houses.isEmpty {
                         ProgressView("Fetching GOT houses")
                     }
                 }
@@ -36,31 +34,16 @@ struct ContentView: View {
                 overlay(ProgressView("Fetching GOT houses"), alignment: .center)
                     .onAppear {
                         Task {
-                            await fetchGOTHouses()
+                            await viewModel.fetchGOTHouses()
                         }
                     }
             }
         }.navigationViewStyle(StackNavigationViewStyle())
-    }
-    
-    func fetchGOTHouses() async{
-        do {
-            let houses: [House] = try await requestManager.perform(HousesRequest.getHousesWith(page: 1, pageSize: 50))
-            self.houses = houses
-            await stopLoading()
-        }catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    @MainActor ///mainactor tells swift to run on the main thread
-    func stopLoading() async {
-        isLoading = false
-    }
+    }    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: HousesViewModel(houseFetcher: HouseFetcherMock()))
     }
 }
