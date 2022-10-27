@@ -8,27 +8,35 @@
 import Foundation
 
 protocol HousesFetcher {
-    func fetchAnimals(page: Int) async -> [House]
+    func fetchHouses(page: Int) async -> [House]
 }
 
-//protocol HouseStore {
-//    func save(animals: [House]) async throws
-//}
-
 ///final is a compiler optimizer for speeding up builds
+@MainActor
 final class HousesViewModel: ObservableObject {
     
-    @Published var isLoading: Bool ///track the state of the view state
-    @Published var hasMoreAnimals = true
-    private let houseFetcher: HousesFetcher
     private (set) var page = 1
-    
+    @Published var isLoading: Bool ///track the state of the view state
+    @Published var hasMoreHouses = true
+    @Published var houses: [House] = []
+    private let houseFetcher: HousesFetcher
 
-    init(isLoading: Bool, hasMoreAnimals: Bool = true, houseFetcher: HousesFetcher, page: Int = 1) {
+    init(isLoading: Bool = true, hasMoreHouses: Bool = true, houseFetcher: HousesFetcher, page: Int = 1) {
         self.isLoading = isLoading
-        self.hasMoreAnimals = hasMoreAnimals
+        self.hasMoreHouses = hasMoreHouses
         self.houseFetcher = houseFetcher
         self.page = page
     }
     
+    func fetchGOTHouses() async{
+        let houses = await houseFetcher.fetchHouses(page: page)
+        self.houses += houses
+        isLoading = false
+        hasMoreHouses = !houses.isEmpty
+    }
+    
+    func fetchMoreHouses() async {
+        page += 1
+        await fetchGOTHouses()
+    }
 }

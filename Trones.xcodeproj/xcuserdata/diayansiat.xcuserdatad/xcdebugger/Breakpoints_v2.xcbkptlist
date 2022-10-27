@@ -3,4 +3,162 @@
    uuid = "68589C65-3408-478E-B30A-8751512E367F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEC23333-D84E-4DC8-B627-52F751155301"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trones/Core/data/coreData/CoreDataHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getTestHouseEntities()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FEC23333-D84E-4DC8-B627-52F751155301 - da50d8b3bc7e0354"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Trones.CoreDataHelper.getTestHouseEntities() -&gt; Swift.Optional&lt;Swift.Array&lt;Trones.HouseEntity&gt;&gt;"
+                  moduleName = "Trones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diayansiat/Developer/Trones/Trones/Core/data/coreData/CoreDataHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "FEC23333-D84E-4DC8-B627-52F751155301 - da50d8b3bc7e0354"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Trones.CoreDataHelper.getTestHouseEntities() -&gt; Swift.Optional&lt;Swift.Array&lt;Trones.HouseEntity&gt;&gt;"
+                  moduleName = "Trones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diayansiat/Developer/Trones/Trones/Core/data/coreData/CoreDataHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3AB9EDC6-4E57-4AE8-A20E-C60E0D578C5B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TronesTests/Tests/Core/data/coreData/CoreDataTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "testToManagedObject()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3AB9EDC6-4E57-4AE8-A20E-C60E0D578C5B - 9d40aa28b1bb536"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TronesTests.CoreDataTests.testToManagedObject() throws -&gt; ()"
+                  moduleName = "TronesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diayansiat/Developer/Trones/TronesTests/Tests/Core/data/coreData/CoreDataTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "3AB9EDC6-4E57-4AE8-A20E-C60E0D578C5B - 9d40aa28b1bb536"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TronesTests.CoreDataTests.testToManagedObject() throws -&gt; ()"
+                  moduleName = "TronesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diayansiat/Developer/Trones/TronesTests/Tests/Core/data/coreData/CoreDataTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "3AB9EDC6-4E57-4AE8-A20E-C60E0D578C5B - 9d40aa28b1bb536"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TronesTests.CoreDataTests.testToManagedObject() throws -&gt; ()"
+                  moduleName = "TronesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diayansiat/Developer/Trones/TronesTests/Tests/Core/data/coreData/CoreDataTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1192">
+               </Location>
+               <Location
+                  uuid = "3AB9EDC6-4E57-4AE8-A20E-C60E0D578C5B - 9d40aa28b1bb536"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TronesTests.CoreDataTests.testToManagedObject() throws -&gt; ()"
+                  moduleName = "TronesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diayansiat/Developer/Trones/TronesTests/Tests/Core/data/coreData/CoreDataTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "324">
+               </Location>
+               <Location
+                  uuid = "3AB9EDC6-4E57-4AE8-A20E-C60E0D578C5B - 9d40aa28b1bb536"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TronesTests.CoreDataTests.testToManagedObject() throws -&gt; ()"
+                  moduleName = "TronesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diayansiat/Developer/Trones/TronesTests/Tests/Core/data/coreData/CoreDataTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "3AB9EDC6-4E57-4AE8-A20E-C60E0D578C5B - 9d40aa28b1bb536"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TronesTests.CoreDataTests.testToManagedObject() throws -&gt; ()"
+                  moduleName = "TronesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diayansiat/Developer/Trones/TronesTests/Tests/Core/data/coreData/CoreDataTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "972">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

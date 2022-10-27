@@ -11,6 +11,9 @@
 		B267AA68290978D400F13E85 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA67290978D400F13E85 /* APIManagerMock.swift */; };
 		B267AA6D29097E3300F13E85 /* HousesRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */; };
 		B267AA6F29097F5000F13E85 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA6E29097F5000F13E85 /* RequestManagerTests.swift */; };
+		B267AA83290A7BA800F13E85 /* FetchHousesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA82290A7BA800F13E85 /* FetchHousesService.swift */; };
+		B267AA85290A7BB800F13E85 /* HouseFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA84290A7BB800F13E85 /* HouseFetcherMock.swift */; };
+		B267AA95290B00E700F13E85 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B267AA94290B00E700F13E85 /* HouseTests.swift */; };
 		B2C26EA62903D46F001041A8 /* TronesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EA52903D46F001041A8 /* TronesApp.swift */; };
 		B2C26EA82903D46F001041A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C26EA72903D46F001041A8 /* ContentView.swift */; };
 		B2C26EAA2903D471001041A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C26EA92903D471001041A8 /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 		B267AA67290978D400F13E85 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
 		B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesRequestMock.swift; sourceTree = "<group>"; };
 		B267AA6E29097F5000F13E85 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		B267AA82290A7BA800F13E85 /* FetchHousesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchHousesService.swift; sourceTree = "<group>"; };
+		B267AA84290A7BB800F13E85 /* HouseFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseFetcherMock.swift; sourceTree = "<group>"; };
+		B267AA94290B00E700F13E85 /* HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
 		B2C26EA22903D46F001041A8 /* Trones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C26EA52903D46F001041A8 /* TronesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TronesApp.swift; sourceTree = "<group>"; };
 		B2C26EA72903D46F001041A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 		B267AA61290977E100F13E85 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B267AA91290B009800F13E85 /* House */,
 				B267AA62290977F200F13E85 /* Core */,
 			);
 			path = Tests;
@@ -137,6 +144,23 @@
 				B267AA6C29097E3300F13E85 /* HousesRequestMock.swift */,
 			);
 			path = mock;
+			sourceTree = "<group>";
+		};
+		B267AA81290A7B8700F13E85 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA82290A7BA800F13E85 /* FetchHousesService.swift */,
+				B267AA84290A7BB800F13E85 /* HouseFetcherMock.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		B267AA91290B009800F13E85 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				B267AA94290B00E700F13E85 /* HouseTests.swift */,
+			);
+			path = House;
 			sourceTree = "<group>";
 		};
 		B2C26E992903D46F001041A8 = {
@@ -272,6 +296,7 @@
 		B2C26EE42905E698001041A8 /* GOTHouses */ = {
 			isa = PBXGroup;
 			children = (
+				B267AA81290A7B8700F13E85 /* services */,
 				B2C26EED29073414001041A8 /* detailsView */,
 				B2C26EEA29070669001041A8 /* viewModels */,
 				B2C26EE52905E6B9001041A8 /* views */,
@@ -408,6 +433,7 @@
 				B267AA68290978D400F13E85 /* APIManagerMock.swift in Sources */,
 				B267AA5B2909726000F13E85 /* TronesTests.swift in Sources */,
 				B267AA6F29097F5000F13E85 /* RequestManagerTests.swift in Sources */,
+				B267AA95290B00E700F13E85 /* HouseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +443,7 @@
 			files = (
 				B2C26ED12903F079001041A8 /* ApiConstants.swift in Sources */,
 				B2C26EE32905CC52001041A8 /* Data+Extension.swift in Sources */,
+				B267AA85290A7BB800F13E85 /* HouseFetcherMock.swift in Sources */,
 				B2C26EEF29073435001041A8 /* HouseDetailView.swift in Sources */,
 				B2C26ED62903FA26001041A8 /* APIManagerProtocol.swift in Sources */,
 				B2C26ED42903F0D8001041A8 /* NetworkError.swift in Sources */,
@@ -429,6 +456,7 @@
 				B2C26EB72903D642001041A8 /* House.swift in Sources */,
 				B2C26EA62903D46F001041A8 /* TronesApp.swift in Sources */,
 				B2C26ECC2903EFD1001041A8 /* RequestProtocol.swift in Sources */,
+				B267AA83290A7BA800F13E85 /* FetchHousesService.swift in Sources */,
 				B2C26EDE2904544E001041A8 /* HousesRequest.swift in Sources */,
 				B2C26ECF2903F055001041A8 /* RequestType.swift in Sources */,
 			);

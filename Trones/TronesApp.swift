@@ -11,7 +11,10 @@ import SwiftUI
 struct TronesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: HousesViewModel(
+                houseFetcher: FetchHousesService(requestManager: RequestManager())
+            )
+            )
         }
     }
 }
