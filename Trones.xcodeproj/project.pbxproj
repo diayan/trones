@@ -160,6 +160,23 @@
 			path = House;
 			sourceTree = "<group>";
 		};
+		B267AA96290B55E800F13E85 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EE22905CC52001041A8 /* Data+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B267AA97290B560D00F13E85 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				B2C26EA52903D46F001041A8 /* TronesApp.swift */,
+				B2C26EA92903D471001041A8 /* Assets.xcassets */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
 		B2C26E992903D46F001041A8 = {
 			isa = PBXGroup;
 			children = (
@@ -183,10 +200,8 @@
 			children = (
 				B2C26EE42905E698001041A8 /* GOTHouses */,
 				B2C26EB32903D5FD001041A8 /* Core */,
-				B2C26EA52903D46F001041A8 /* TronesApp.swift */,
-				B2C26EA72903D46F001041A8 /* HousesView.swift */,
-				B2C26EA92903D471001041A8 /* Assets.xcassets */,
-				B2C26EE22905CC52001041A8 /* Data+Extension.swift */,
+				B267AA97290B560D00F13E85 /* support */,
+				B267AA96290B55E800F13E85 /* Extensions */,
 				B2C26EAB2903D471001041A8 /* Preview Content */,
 			);
 			path = Trones;
@@ -304,6 +319,7 @@
 		B2C26EE52905E6B9001041A8 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				B2C26EA72903D46F001041A8 /* HousesView.swift */,
 				B2C26EE62905E6D1001041A8 /* GOTHouseRow.swift */,
 			);
 			path = views;
