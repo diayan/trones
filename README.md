@@ -1,4 +1,14 @@
-# trones!
+# Trones!
+Trones uses the ICE and Fire API to retrieve the Game of Thrones houses. This app uses no external libraries or packages. It is built using Swift 5.1 and SwiftUI. 
+
+# Technologies Used 
+1. SwiftUi
+2. Swift 
+3. Async Await
+4. Mvvm
+5. Unit Testing
+6. SFSymbols
+7. Targets iOS 14
 
 # App Icon
   <p align="center">
