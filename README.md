@@ -6,10 +6,11 @@ Trones uses the ICE and Fire API to retrieve the Game of Thrones houses. This ap
 2. Swift 
 3. Async Await
 4. Mvvm
-5. Unit Testing
-6. SFSymbols
-7. Pagination
-8. Targets iOS 14
+5. Combine
+6. Unit Testing
+7. SFSymbols
+8. Pagination
+9. Targets iOS 14
 
 # App Icon
   <p align="center">
